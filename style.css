@@ -1,0 +1,112 @@
+.file-block-photos {
+  display: block;
+  margin-top: 30px;
+}
+
+label.fileLabel {
+  width: 260px;
+  display: block;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 10px;
+  padding: 2px;
+  border: 3px solid #0a5a77;
+  color: #0a5a77;
+  border-radius: 5px;
+  font-size: 12pt;
+  cursor: pointer;
+}
+
+.x-photo {
+  cursor: pointer;
+}
+
+.file-in-list {
+  display: contents;
+}
+
+.sbm_btn {
+  width: 260px;
+  display: block;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin-top: 10px;
+  padding: 2px;
+  border: 3px solid #0a5a77;
+  color: #fff;
+  background-color: #0a5a77;
+  border-radius: 5px;
+  font-size: 12pt;
+  cursor: pointer;
+}
+
+label.fileLabel:hover {
+  box-shadow: 0px 0px 7px rgb(0 0 0 / 30%) !important;
+}
+
+input.brow-real {
+  display: none;
+}
+
+div#filelist {
+  width: 100%;
+  max-width: 415px;
+  margin-top: 30px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+#filelist p {
+  margin-right: 30px;
+  max-width: 200px;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.photo_container {
+  width: 150px;
+  height: 110px;
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 25%);
+  background-size: contain;
+  position: relative;
+}
+
+.photo_container img {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.all-photo-comment {
+  display: flex;
+}
+
+.photos-in-card {
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 460px) {
+  div#filelist {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #filelist p {
+    margin-right: 0;
+    margin-top: 15px;
+    max-width: 100%;
+    height: 65px;
+    text-align: center;
+  }
+}
