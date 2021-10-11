@@ -14,12 +14,16 @@ $(document).ready(function () {
     var delbtn =$(el)
     var fdPhotos = fd.getAll("photos");
     var fileName = delbtn.attr('data-name');
-    var fdiltered = fdPhotos.filter(f => f.name !== fileName);
     fd.delete("photos");
-    for (var i = 0; i < fdiltered.length; i++) {
-      fd.append("photos", fdiltered[i], fdiltered[i].name);
+    console.log(fd.has("photos"));
+    var fdiltered = fdPhotos.filter(f => f.name !== fileName);
+    console.log("Filtred: ", fdiltered);
+    console.log("photos BEFORE delete: ", fd.getAll("photos"));
+    for (var j = 0; j < fdiltered.length; j++) {
+      fd.append("photos", fdiltered[j], fdiltered[j].name);
     };
     delbtn.parent().remove();
+    console.log("photos after delete: ", fd.getAll("photos"));
   }
 
   function handlePhotoInput(input) {
@@ -40,6 +44,7 @@ $(document).ready(function () {
         fd.append("photos", files[i], files[i].name);
       }
     }
+    console.log("photos input: ", fd.getAll("photos"));
 
     var fileList = $("#filelist");
     for (var i = 0; i < files.length; i++) {
